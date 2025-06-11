@@ -22,8 +22,8 @@ def extract_channel_id(url):
     path = urlparse(url).path.strip("/")
     if path.startswith("user/") or path.startswith("c/") or path.startswith("@"):
         identifier = path.split("/")[1] if "/" in path else path
-        import streamlit as st
-st.write("🧪 video_ids chunk:", chunk)
+        import streamlit as st 
+        st.write("🧪 video_ids chunk:", chunk)
         response = YOUTUBE.search().list(part="snippet", q=identifier, type="channel", maxResults=1).execute()
         items = response.get("items", [])
         if items:
