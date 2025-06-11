@@ -3,9 +3,8 @@ import pandas as pd
 from io import StringIO
 from datetime import datetime
 from youtube_utils import (
-    extract_video_id, extract_channel_id, get_video_info_batch
+    extract_video_id, extract_channel_id, get_video_info_batch, YOUTUBE
 )
-
 
 def process_csv_video_streamlit(df):
     urls = df["url"].dropna().unique()
