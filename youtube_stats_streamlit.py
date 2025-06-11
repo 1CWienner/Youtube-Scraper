@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from io import StringIO
 from datetime import datetime
-from youtube_stats_scraper_ui_final_cleaned_strings import (
+from youtube_utils import (
     extract_video_id, extract_channel_id, get_video_info_batch
 )
 
