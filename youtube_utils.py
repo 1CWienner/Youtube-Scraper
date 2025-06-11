@@ -1,9 +1,10 @@
+import streamlit as st
 from urllib.parse import urlparse, parse_qs
 from datetime import datetime
 from googleapiclient.discovery import build
 import pandas as pd
 
-API_KEY = "AIzaSyD5CtHq64dcotyxUi9am954qgempjRjIcM"  # 🔒 Замените на свой ключ
+API_KEY = st.secrets["api"]["key"]
 YOUTUBE = build("youtube", "v3", developerKey=API_KEY)
 
 def extract_video_id(url):
