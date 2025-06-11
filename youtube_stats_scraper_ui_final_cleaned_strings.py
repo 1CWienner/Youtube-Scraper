@@ -5,7 +5,7 @@ from urllib.parse import urlparse, parse_qs
 from datetime import datetime
 from googleapiclient.discovery import build
 
-API_KEY = "AIzaSyD5CtHq64dcotyxUi9am954qgempjRjIcM"
+API_KEY = "xxx"
 YOUTUBE = build("youtube", "v3", developerKey=API_KEY)
 
 def extract_video_id(url):
